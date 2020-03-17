@@ -1,22 +1,29 @@
 <template>
     <div>
+     
         <Nav></Nav>
-        <div id="displayChannels">
+        <div id="displayChannels" style="padding:20px">
             <article class="channels">
-                <div class="panel-heading row">
-                  <p class="col-1">
+                <div class="panel-heading row" style="background-color:rgba(182,255,211,0.5)">
+                  <p class="col-1" style="font-family:Helvetica;font-weight:bolder;font-size:40px">
                     Channels
                   </p>
-                  <button @click="showHideModal()" class="btn btn-primary">+ Ajouter une conversation</button>
+                 
                 </div>
-                <div v-for="channel in this.channels" class="panel-block" :key="channel.id">
-                  <router-link :to="{ name: 'channelDetail', params: {id : channel.id} }">
+                <div class="row" style="padding:10px">
+                 <button @click="showHideModal()" class="btn btn-add">+ Ajouter une conversation</button>
+                </div>
+                <div v-for="channel in this.channels" class="panel-block" :key="channel.id" style="width:70%;padding:0px;margin:5px;border:1px solid rgba(182,255,211,1);border-radius:5px">
+                  
+                    <router-link tag = "div" :to="{ name: 'channelDetail', params: {id : channel.id} }" class="conversation" >
                     {{channel.label}}
                   </router-link>
+                  
+                  
                 </div>
             </article>
         </div>
-        <div class="modal" v-if=showModal :class="{'is-active':showModal}">
+        <div class="modal" v-if=showModal :class="{'is-active':showModal}" style="border:2px solid orange">
               <div class="modal-background"></div>
               <div class="modal-card">
                   <header class="modal-card-head">
@@ -35,7 +42,18 @@
               </div>
         </div>   
 </template>
+ <style>
+  .btn-add:hover{
+    background-color:rgb(182,255,211)
+  }
+  .conversation{
+    color:#000;font-weight:100;font-family:Gothic-century;font-size:20px;width:100%;cursor: pointer;height: 100%;padding:10px
+  }
+  .conversation:hover{
+    background-color: rgb(182,255,211);
+  }
 
+</style>
 
 <script>
 import Nav from './Nav.vue';

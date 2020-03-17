@@ -1,7 +1,7 @@
 <template>
     <div>
-  <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="/">COOP</b-navbar-brand>
+  <b-navbar toggleable="lg" type="light" variant="light" style="border-bottom:3px solid #000">
+    <b-navbar-brand href="/" style="font-size:30px;font-family:Century-gothic">COOP</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

@@ -1,25 +1,25 @@
 <template>
-    <section>
-      <div>
+    <section style="display:flex;align-items:'center;justify-content:center">
+      <div style="border-right:6px solid #278701;border-bottom:6px solid #278701;border-top-left-radius:40px;width:50%;background-color:rgba(182,255,211,0.5);padding:30px;margin-top:150px;border-bottom-right-radius:40px">
         <div>
           <div>
             <div>
               <form @submit.prevent="LogIn">
                 <div>
-                  <label for="">Email</label>
-                  <input type="email" v-model='email' name="email" placeholder="younes@gmail.com" class="input" required>
+                  <label style="font-weight:bold" for="">Email</label>
+                  <input  type="email" style="border: none; width:130%;border-bottom: 4px solid #278701" v-model='email' name="email"  class="input" required>
                 </div>
                 <div>
-                  <label for="">Password</label>
-                  <input type="password" v-model='password' class="input" name="password" required>
+                  <label style="font-weight:bold" for="">Password</label>
+                  <input type="password" style="border: none; width:130%;border-bottom: 4px solid #278701"  v-model='password' class="input" name="password" required>
                 </div>
-                <div>
-                  <button class="btn btn-primary">
+                <div style="margin-top:10px;width:100%">
+                  <button class="btn btn-dark" style="width:100%">
                     Login
                   </button>
-                  <div class="register">
-                    <router-link to="register">
-                      <a>S'enregistrer</a>
+                  <div class="btn btn-light" style="width:100%;margin-top:10px">
+                    <router-link to="register" tag="div">
+                      S'enregistrer
                     </router-link>
                   </div>
                 </div>

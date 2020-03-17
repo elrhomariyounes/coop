@@ -1,33 +1,36 @@
 <template>
     <div id="register">
     <div class="section">
-      <div class="container">
-        <div class="title">Sign Up</div>
-        <div class="subtitle">With Your Email</div>
+      <div class="container" style="border-right:6px solid #278701;border-bottom:6px solid #278701;padding:30px;border-bottom-right-radius:40px;background-color:rgba(182,255,211,0.5);border-top-left-radius:40px;align-items:center;justify-content:center;display:flex;flex-direction:column">
+        <div class="title">
+          Sign Up</div>
         <form id="register-form" @submit.prevent="register">
           <div class="field">
             <label class="label" for="email">Email</label>
-            <input required class="input" type="email" placeholder="Email" v-model='email' name="email"/>
+            <input required style="border: none; width:130%;border-bottom: 4px solid #278701 " type="email" v-model='email' name="email"/>
             <div class="columns row-one">
               <div class="column">
                 <label class="label" for="fullName">Full Name</label>
                 <div class="control">
-                  <input required class="input" type="text" placeholder="Full Name" v-model='fullname' name="fullName"/>
+                  <input required style="border: none; width:130%;border-bottom: 4px solid #278701" type="text" v-model='fullname' name="fullName"/>
                 </div>
               </div>
             </div>
-            <div class="columns">
-              <div class="column">
+            <div class="columns row-one">
+            <div class="column">
                 <label class="label" for="password">Password</label>
-                <input required class="input" type="password" placeholder="Password" v-model='password' name="password"/>
+                <div class="control">
+                <input required style="border: none; width:130%;border-bottom: 4px solid #278701 " type="password" v-model='password' name="password"/>
               </div>
+            </div>
             </div>
             <div class="field is-grouped">
-              <div class="control">
-                <button class="buttonRegister button is-primary is-medium" type="submit">Register</button>
+              <div class="control" style="width:100%">
+                <button class="buttonRegister button is-dark is-medium" style="width:130%" type="submit">Register</button>
               </div>
-              <a class="loginRef" href="/">Vous avez déjà un compte ? Connectez-vous</a>
+              
             </div>
+            <a style="color:black;font-style:italic;font-weight:bolder" class="loginRef" href="/">Vous avez déjà un compte ? Connectez-vous</a>
           </div>
         </form>
       </div>
