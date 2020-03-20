@@ -40,8 +40,8 @@ export default {
     },
     data(){
         return{
-            email:null,
-            password:null,
+            email:"test@test.fr",
+            password:"test",
         }
     },
     methods:{
